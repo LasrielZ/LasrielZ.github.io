@@ -8,7 +8,7 @@
 body{
     background-color: azure;
 }
-nav{
+nav.navigacio{
     background: #0082e6;
     height: 80px;
     width: 100%;
@@ -20,16 +20,16 @@ label.logo{
     padding: 0 100px;
     font-weight: bold;
 }
-nav ul{
+nav.navigacio ul.unorderedList{
     float: right;
     margin-right: 20px;
 }
-nav ul li{
+nav.navigacio ul.unorderedList li.lista{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
-nav ul li a{
+nav.navigacio ul.unorderedList li.lista a{
     color: white;
     font-size: 17 px;
     padding: 7px 13px;
@@ -57,7 +57,7 @@ a.active,a:hover{
         font-size: 30px;
         padding-left: 50px;
     }
-    nav ul li a{
+    nav.navigacio ul.unorderedList li.lista a{
         font-size: 16px;
     }
 }
@@ -65,7 +65,8 @@ a.active,a:hover{
     .checkfa{
         display:block;
     }
-    ul{
+    ul.unorderedList{
+        z-index: 1000;
         position:fixed;
         width: 100%;
         height: 100vh;
@@ -75,19 +76,19 @@ a.active,a:hover{
         text-align: center;
         transition: all .5s;
     }
-    nav ul li{
+    nav.navigacio ul.unorderedList li.lista{
        display: block;
        margin: 50px 0;
        line-height: 30px;
     }
-    nav ul li a{
+    nav.navigacio ul.unorderedList li.lista a{
         font-size: 20px;
     }
     a:hover,a.active{
         background: none;
         color: #0082e6;
     }
-    #check:checked ~ ul{
+    #check:checked ~ ul.unorderedList{
         left: 0;
     }
 }
@@ -95,6 +96,7 @@ section.asd{
     background: url(fantasyforest.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px);
+    box-shadow: 0 0 10px black;
 }
 section div.wrapper{
     text-align: center;
@@ -162,8 +164,8 @@ body section.myslideshow{
     color:#fff;
 }
 #slider{
+    box-shadow: 0 0 40px black;
     height: 500px;
-    border: 10px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,4 +288,150 @@ html{
     .container{
         width: 100%;
     }
+}
+
+#korites{
+    background-image: radial-gradient(#FA736D,#03112B);
+    box-shadow: 0 0 20px black;
+}
+
+#amikepeink{
+    box-shadow: 0 0 20px black;
+    background: url(tower.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    background-position-y:bottom;
+}
+
+.kisebb{
+    padding: 5% 10% 1% 10%;
+}
+
+.kozepso{
+    font-size: 30px;
+    padding: 0 10% 5% 10%;
+}
+
+.nagyobb{
+    text-align: center;
+    padding: 0 10% 0 10%;
+    font-size: 40px;
+}
+
+.oszlopos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5% 5% 0 5%;
+    font-size: xx-large;
+}
+.oszlopos i{
+    padding: 10%;
+    font-size: 40px;
+    border-radius: 30%;
+    outline: none;
+    border: 5px solid white;
+    background-color: black;
+    box-shadow: 0 0 10px black;
+}
+.oszlop1{
+    box-shadow: 0 0 10px black;
+    padding: 10% 3% 5% 3%;
+}
+.oszlop1 h2{
+    padding: 3% 0 3% 0;
+    text-shadow: 0 0 10px black;
+}
+.oszlop1 p{
+    text-shadow: 0 0 5px black;
+}
+
+.oszlop2{
+    padding: 3%;
+    box-shadow: 0 0 10px black;
+}
+.oszlop2 h2{
+    padding: 3% 0 3% 0;
+    text-shadow: 0 0 10px black;
+}
+.oszlop3 p{
+    text-shadow: 0 0 5px black;
+}
+
+.oszlop3{
+    box-shadow: 0 0 10px black;
+    padding: 10% 3% 5% 3%;
+}
+.oszlop3 h2{
+    padding: 3% 0 3% 0;
+    text-shadow: 0 0 10px black;
+}
+.oszlop3 p{
+    text-shadow: 0 0 5px black;
+}
+
+.kepekIMGs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.kep{
+    position: relative;
+    width: 600px;
+}
+
+.kep__IMG{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.kep__Overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.kep__Overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.kep__Overlay:hover{
+    opacity: 1;
+}
+
+.kep__Overlay:hover > * {
+    transform: translateY(0);
+}
+
+.kep__Title{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.kep__Desc{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+.profilelerhetosegek{
+    box-shadow: 0 0 10px black;
+    margin-top: 75px;
+    color: white;
+    font-size: x-large;
 }
