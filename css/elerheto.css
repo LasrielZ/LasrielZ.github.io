@@ -13,3 +13,27 @@
     border-top: 20px;
 }
 
+.kozmedia007 {
+    position: absolute;
+    bottom: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kozmedia007 li.qwe{
+    list-style: none;
+}
+
+.kozmedia007 li.qwe a.qwer{
+    display: inline-block;
+    margin-right: 100px;
+    transform: scale(3);
+    transition: 0.5s;
+}
+
+.kozmedia007 li.qwe a.qwer:hover{
+    transform: scale(3.5) translateY(-10px);
+}
+
